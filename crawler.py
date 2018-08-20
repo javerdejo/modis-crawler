@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """MODIS Web Crawler."""
 from bs4 import BeautifulSoup
 from config import download_path, urls, log_file_name
@@ -76,12 +77,18 @@ def printLog(arg):
     log_file.flush()
 
 
-if __name__ == '__main__':
+def main():
+    """Define main fuction."""
     global log_file
 
     cfg = loadConfig(urls)
     log_file = open(log_file_name, 'a+')
+    printLog("looking for updates")
     configBucket(cfg)
     startCrawler(cfg)
-    printLog("update completed")
+    printLog("all is updated")
     log_file.close()
+
+
+if __name__ == '__main__':
+    main()
