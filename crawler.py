@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 """MODIS Web Crawler."""
-from bs4 import BeautifulSoup
 from config import download_path, urls, log_file_name
+from bs4 import BeautifulSoup
 import datetime
 import glob
 import json
+import ntpath
 import os
 import requests
 import re
@@ -27,7 +28,10 @@ def startCrawler(cfg):
         save_in = "%s/%s/%s/%s/%s/%s" % (download_path, cfg['platform'],
                                          cfg['level'], cfg['period'],
                                          cfg['pixel'], product['name'])
-        files = glob.glob(save_in + '/*.nc')
+        filesDir = glob.glob(save_in + '/*.nc')
+        files = []
+        for file in filesDir:
+            files.append(ntpath.basename(file))
 
         req = requests.get(link).content
 
