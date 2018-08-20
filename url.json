@@ -1,15 +1,15 @@
 {
   "base": "https://oceandata.sci.gsfc.nasa.gov",
+  "platform": "MODIS-Aqua",
+  "level": "Mapped",
   "period": "Monthly",
   "pixel": "4km",
-  "urls": [
+  "products": [
     {
-      "name": "chlor_a",
-      "url": "/MODIS-Aqua/Mapped/Monthly/4km/chlor_a/"
+      "name": "chlor_a"
     },
     {
-      "name": "sst",
-      "url": "/MODIS-Aqua/Mapped/Monthly/4km/sst/"
+      "name": "sst"
     }
   ]
 }
