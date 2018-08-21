@@ -73,6 +73,11 @@ def configBucket(cfg):
             os.makedirs(data_path)
             printLog("bucket %s created ..." % (data_path))
 
+        log_file = './log'
+        if not os.path.exists(log_file):
+            os.makedirs(log_file)
+            printLog("logfile %s created ..." % (log_file))
+
 
 def printLog(arg):
     """Print log function."""

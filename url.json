@@ -5,11 +5,7 @@
   "period": "Monthly",
   "pixel": "4km",
   "products": [
-    {
-      "name": "chlor_a"
-    },
-    {
-      "name": "sst"
-    }
+    {"name": "chlor_a"},
+    {"name": "sst"}
   ]
 }
