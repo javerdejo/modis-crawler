@@ -11,13 +11,18 @@ WORKDIR /crawler
 # Copy the current directory contents into the container at /app
 ADD crawler.py config.py url.json requirements.txt log/ /crawler/
 
-# Configure crontab
-ADD crontab /etc/cron.d/crawler-cron
-RUN chmod 0644 /etc/cron.d/crawler-cron
-RUN touch /var/log/cron.log
-
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
+RUN apt-get update && apt-get install -y \
+        cron
+
+ENV TZ=America/Mexico_City
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+
 # Run the command on container startup
-CMD ["python", "crawler.py"]
+#CMD ["python", "crawler.py"]
+ADD crontabfile /crawler/crontab
+RUN crontab /crawler/crontab
+CMD ["cron", "-f"]
