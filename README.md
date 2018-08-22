@@ -1,4 +1,4 @@
-# MODIS Web Crawler
+# Simple MODIS Web Crawler
 ###### version 0.18.20.8-beta
 
 ## Introduction
@@ -16,3 +16,14 @@ The crawler uses two configuration files which are:
 
 
 ### config.py
+
+```python
+log_file_name = '/crawler/log/crawler.log'
+download_path = '/crawler/files'
+urls = '/crawler/url.json'
+```
+**log_file_name** sets the path where the log file containing all the operations that the cvrawler has made will be saved.
+
+**download_path** sets the path where the downloaded files will be stored (local repository).
+
+**download_path** urls is a file in JSON format where the products to be downloaded are established.
