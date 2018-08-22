@@ -27,3 +27,18 @@ urls = '/crawler/url.json'
 **download_path** sets the path where the downloaded files will be stored (local repository).
 
 **download_path** urls is a file in JSON format where the products to be downloaded are established.
+
+### url.json
+```json
+{
+  "base": "https://oceandata.sci.gsfc.nasa.gov",
+  "platform": "MODIS-Aqua",
+  "level": "Mapped",
+  "period": "Monthly",
+  "pixel": "4km",
+  "products": [
+    {"name": "chlor_a"},
+    {"name": "sst"}
+  ]
+}
+```
