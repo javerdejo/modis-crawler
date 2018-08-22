@@ -22,11 +22,9 @@ log_file_name = '/crawler/log/crawler.log'
 download_path = '/crawler/files'
 urls = '/crawler/url.json'
 ```
-**log_file_name** sets the path where the log file containing all the operations that the cvrawler has made will be saved.
-
-**download_path** sets the path where the downloaded files will be stored (local repository).
-
-**download_path** urls is a file in JSON format where the products to be downloaded are established.
+- *log_file_name* sets the path where the log file containing all the operations that the cvrawler has made will be saved.
+- *download_path* sets the path where the downloaded files will be stored (local repository).
+- *download_path* urls is a file in JSON format where the products to be downloaded are established.
 
 ### url.json
 ```json
