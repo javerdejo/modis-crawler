@@ -20,7 +20,7 @@ ADD config.json /crawler/run/cfg/
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 RUN apt-get update && apt-get install -y \
-        cron
+        cron nano
 
 ENV TZ=America/Mexico_City
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -28,4 +28,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Run the command on container startup
 ADD crontabfile /crawler/crontab
 RUN crontab /crawler/crontab
-CMD ["cron", "-f"]
+
+CMD ["crond", "-f"]

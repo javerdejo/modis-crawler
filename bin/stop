@@ -5,13 +5,11 @@ NAME='crawler'
 
 echo -n "Stopping docker $NAME container ..."
 docker stop $NAME &> /dev/null
-if [ $? -eq 0 ]
-then
+if [ $? -eq 0 ]; then
   echo '[ok]'
   docker rm $NAME &> /dev/null
   echo -n "Deleting docker $NAME process ..."
-  if [ $? -eq 0 ]
-  then
+  if [ $? -eq 0 ]; then
     echo '[ok]'
   else
     echo '[Error]'

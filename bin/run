@@ -1,0 +1,10 @@
+#!/bin/bash
+
+NAME='crawler'
+
+if [ "$#" -ne 1 ]; then
+    echo "Run: $0 <parameter>"
+    exit 1
+else
+  docker exec -it $NAME $1
+fi

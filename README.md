@@ -51,10 +51,38 @@ urls = '/crawler/url.json'
 
 ## Build, start and stop docker container
 
-- **./build** generates the docker image
-- **./start** runs docker container
-- **./stop** deletes docker process
+- **./bin/build** generates the docker image
+- **./bin/start** runs docker container
+- **./bin/stop** deletes docker process
 
 ## Cron configuration
 
 Before to build the docker container it is important to edit the [crontabfile](crontabfile) file to set the cron behavior i.e to program when the crawler will be wake up
+
+Once cron is running, it is possible to modify the configuration, that is, the time and day in which the crawler service will be started by using  the following commands:
+
+```bash
+./bin/run bash
+```
+
+Once inside the docker container, you must modify the file **/crawler/crontab** and set in the file the new configuration for the cron. Finally notify the cron program of the new changes
+
+```bash
+cron /crawler/crontab
+```
+
+**IMPORTANT:** All changes made will be valid while the docker container is running, once the container is stopped ALL changes made will be discarded.
+
+## Running commands into the docker container
+
+If you want to execute some command in the docker container, you can use the command:
+
+```bash
+./bin/run <command>
+```
+
+for example:
+
+```bash
+./bin/run bash
+```
