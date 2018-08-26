@@ -47,4 +47,10 @@ urls = '/crawler/url.json'
 - **pixel** 4km or 9km
 
 ### products
-- **name** Name of MODIS product like chlor_a, sst, etc. To see a plete list of products see [OceanColor website](https://oceancolor.gsfc.nasa.gov/)
+- **name** Name of MODIS product like chlor_a, sst, etc. To see a complete list of products see [OceanColor website](https://oceancolor.gsfc.nasa.gov/)
+
+## Build, start and stop docker container
+
+- **build** Run ./build command to generate the docker image
+- **start** Run ./start command to run docker container
+- **stop** Run ./stop command to stop an delete docker process
