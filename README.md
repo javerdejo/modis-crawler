@@ -54,3 +54,7 @@ urls = '/crawler/url.json'
 - **./build** generates the docker image
 - **./start** runs docker container
 - **./stop** deletes docker process
+
+## Cron configuration
+
+Before to build the docker container it is important to edit the **crontabfile** file to set the cron behavior i.e to program when the crawler will be wake up
