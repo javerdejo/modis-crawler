@@ -14,8 +14,8 @@ then
   then
     echo '[ok]'
   else
-    echo -e '[Error]'
+    echo '[Error]'
   fi
 else
-  echo -e '[Error]'
+  echo '[Error]'
 fi
