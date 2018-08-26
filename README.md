@@ -1,5 +1,5 @@
 # Simple MODIS Web Crawler
-###### version 0.18.20.8-beta
+###### version 0.18.24.8-beta
 
 ## Introduction
 
