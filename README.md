@@ -14,7 +14,6 @@ The crawler uses two configuration files which are:
 - url.json
 ```
 
-
 ### config.py
 
 ```python
@@ -40,3 +39,12 @@ urls = '/crawler/url.json'
   ]
 }
 ```
+
+- **base** URL for the Ocean Data web site
+- **platform** It refers to the platform and can be MODIS-Aqua or MODIS-Terra
+- **level** Level of data processing, at the moment only the "Mapped" level is supported
+- **period** Annual or Monthly
+- **pixel** 4km or 9km
+
+### products
+- **name** Name of MODIS product like chlor_a, sst, etc. To see a plete list of products see [OceanColor website](https://oceancolor.gsfc.nasa.gov/)
