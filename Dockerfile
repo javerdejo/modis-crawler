@@ -9,8 +9,12 @@ FROM python:2.7-slim
 WORKDIR /crawler
 
 # Copy the current directory contents into the container at /app
-ADD crawler.py config.py requirements.txt run/ /crawler/
-ADD config.json /crawler/run/etc
+RUN mkdir -p /crawler/run/downloads/
+RUN mkdir -p /crawler/run/log/
+RUN mkdir -p /crawler/run/cfg/
+
+ADD crawler.py config.py requirements.txt /crawler/
+ADD config.json /crawler/run/cfg/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt

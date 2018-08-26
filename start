@@ -5,12 +5,14 @@ NAME='crawler'
 VERSION='0.18.24.8-beta'
 DOCKER_IMAGE=crawler-modis:$VERSION
 OPTIONS='-d'
+COMMAND=''
 
 # Docker volumes config
-DOCKER_DIR='/crawler/run'
-DOWNLOAD_DIR='/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/downloads'
-LOGFILE='/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/log'
-CONFIG='/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/cfg'
+DOCKER_DIR=/crawler/run
+DOWNLOAD_DIR=/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/downloads/
+LOGFILE=/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/log/
+CFG=/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/cfg/
 
 # Run docker image
-docker run $OPTIONS --name $NAME -v $DOWNLOAD_DIR:$DOCKER_DIR'/downloads' -v $LOGFILE:$DOCKER_DIR'/log' -v $CONFIG:$DOCKER_DIR'/cfg' $DOCKER_IMAGE > crawler.pid
+#docker run $OPTIONS --name $NAME -v $DOWNLOAD_DIR:$DOCKER_DIR/downloads -v $LOGFILE:$DOCKER_DIR/log -v $CONFIG:/crawler/ $DOCKER_IMAGE
+docker run $OPTIONS --name $NAME -v $DOWNLOAD_DIR:$DOCKER_DIR/downloads -v $LOGFILE:$DOCKER_DIR/log $DOCKER_IMAGE $COMMAND > crawler.id

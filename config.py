@@ -2,4 +2,4 @@
 
 log_file_name = '/crawler/run/log/crawler.log'
 download_path = '/crawler/run/downloads'
-urls = '/crawler/run/etc/config.json'
+urls = '/crawler/run/cfg/config.json'
