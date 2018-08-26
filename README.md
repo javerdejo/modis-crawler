@@ -51,6 +51,6 @@ urls = '/crawler/url.json'
 
 ## Build, start and stop docker container
 
-- **build** Run ./build command to generate the docker image
-- **start** Run ./start command to run docker container
-- **stop** Run ./stop command to stop an delete docker process
+- **./build** generates the docker image
+- **./start** runs docker container
+- **./stop** deletes docker process
