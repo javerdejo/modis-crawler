@@ -68,7 +68,20 @@ Once cron is running, it is possible to modify the configuration, that is, the t
 Once inside the docker container, you must modify the file **/crawler/crontab** and set in the file the new configuration for the cron. Finally notify the cron program of the new changes
 
 ```bash
-cron /crawler/crontab
+nano /crawler/crontab
+crontab /crawler/crontab
+```
+
+You can verify the changes you have made by using the following command:
+
+```bash
+crontab -l
+```
+
+Once you have finished making the changes, exit the docker container
+
+```bash
+exit
 ```
 
 **IMPORTANT:** All changes made will be valid while the docker container is running, once the container is stopped ALL changes made will be discarded.
