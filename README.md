@@ -1,11 +1,28 @@
 # Simple MODIS Web Crawler
 ###### version 0.18.24.8-beta
 
-## Introduction
+Table of contents
+=================
+
+<!--ts-->
+   * [Table of contents](#table-of-contents)
+   * [Introduction](#introduction)
+   * [Configuration](#configuration)
+      * [config.py](#config.py)
+      * [url.json](#url.json)
+   * [Build, start and stop docker container](#tests)
+   * [Crawler cron configuration](#dependency)
+   * [Running commands into the docker container](#dependency)
+<!--te-->
+
+
+Introduction
+============
 
 MODIS Web Crawler is a simple crawler that allows you to automatically download files from the [OceanColor website](https://oceancolor.gsfc.nasa.gov/) for products of the Aqua satellite mission. The crawler ONLY downloads those files that are not in our local repository.
 
-## Configuration
+Configuration
+=============
 
 The crawler uses two configuration files which are:
 
@@ -14,7 +31,8 @@ The crawler uses two configuration files which are:
 - url.json
 ```
 
-### config.py
+config.py
+---------
 
 ```python
 log_file_name = '/crawler/log/crawler.log'
@@ -25,7 +43,9 @@ urls = '/crawler/url.json'
 - **download_path** sets the path where the downloaded files will be stored (local repository).
 - **download_path** urls is a file in JSON format where the products to be downloaded are established.
 
-### url.json
+url.json
+--------
+
 ```json
 {
   "base": "https://oceandata.sci.gsfc.nasa.gov",
@@ -49,13 +69,15 @@ urls = '/crawler/url.json'
 #### products
 - **name** Name of MODIS product like chlor_a, sst, etc. To see a complete list of products see [OceanColor website](https://oceancolor.gsfc.nasa.gov/)
 
-## Build, start and stop docker container
+Build, start and stop docker container
+======================================
 
 - **./tools/build** generates the docker image
 - **./tools/start** runs docker container
 - **./tools/stop** deletes docker process
 
-## Cron configuration
+Crawler cron configuration
+==========================
 
 Before to build the docker container it is important to edit the [crontabfile](crontabfile) file to set the cron behavior i.e to program when the crawler will be wake up
 
@@ -86,7 +108,8 @@ exit
 
 **IMPORTANT:** All changes made will be valid while the docker container is running, once the container is stopped ALL changes made will be discarded.
 
-## Running commands into the docker container
+Running commands into the docker container
+==========================================
 
 If you want to execute some command in the docker container, you can use the command:
 
