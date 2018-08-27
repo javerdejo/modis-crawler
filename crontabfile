@@ -1,1 +1,1 @@
-45 17 * * * /usr/local/bin/python /crawler/crawler.py
+0 14 * * * /usr/local/bin/python /crawler/crawler.py
