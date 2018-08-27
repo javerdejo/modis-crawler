@@ -12,6 +12,7 @@ Table of contents
    * [Build, start and stop docker container](#build-start-stop)
    * [Crawler cron configuration](#cron)
    * [Adding new products for download](#adding-products)   
+   * [Running docker container on Linux/MacOS](#run-linux-mac)
    * [Running commands into the docker container](#run)
 <!--te-->
 
@@ -133,6 +134,18 @@ It is possible to add more products for download, for this you must configure th
   ]
 }
 ```
+
+<a name="run-linux-mac"></a>
+# Running docker container on Linux/MacOS
+
+By default, the docker container is configured to use three directories as shown below. In order to start the docker container, you must create the directory structure on your computer.
+
+```text
+./crawler
+  |--downloads
+  |--log
+```
+For the correct operation of the docker container, it is important to modify the variables **DOWNLOAD_DIR** and **LOGFILE** (inside the **tools/version** file) so that they point to the local address inside the host.
 
 
 <a name="run"></a>

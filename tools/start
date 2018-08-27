@@ -8,8 +8,6 @@ COMMAND=''
 
 # Docker volumes config
 DOCKER_DIR='/crawler/run'
-DOWNLOAD_DIR='/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/downloads/'
-LOGFILE='/Users/javerdejo/Desktop/ecosur/eris/modis-crawler/run/log/'
 
 # Run docker image
 docker run $OPTIONS --name $NAME -v $DOWNLOAD_DIR:$DOCKER_DIR/downloads -v $LOGFILE:$DOCKER_DIR/log $DOCKER_IMAGE $COMMAND > crawler.id
