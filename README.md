@@ -117,6 +117,8 @@ It is possible to add more products for download, for this you must configure th
 {"name": "nflh"}
 ```
 
+### config.json updated
+ 
 ```json
 {
   "base": "https://oceandata.sci.gsfc.nasa.gov",
