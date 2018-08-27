@@ -112,12 +112,12 @@ $ exit
 
 If you want to execute some command in the docker container, you can use the command:
 
-```bash
+```text
 $ ./tools/run <command>
 ```
 
 for example:
 
-```bash
+```text
 $ ./tools/run bash
 ```
