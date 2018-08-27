@@ -29,4 +29,4 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ADD crontabfile /crawler/crontab
 RUN crontab /crawler/crontab
 
-CMD ["crond", "-f"]
+CMD ["cron", "-f"]
