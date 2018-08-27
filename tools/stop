@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# Docker image config
-NAME='crawler'
+source ./tools/version
 
 echo -n "Stopping docker $NAME container ..."
 docker stop $NAME &> /dev/null

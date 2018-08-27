@@ -1,5 +1,5 @@
 #!/bin/bash
 
-VERSION='0.18.24.8-beta'
+source ./tools/version
 
 docker build --rm -t crawler-modis:$VERSION .
