@@ -82,26 +82,26 @@ Before to build the docker container it is important to edit the [crontabfile](c
 
 Once cron is running, it is possible to modify the configuration, that is, the time and day in which the crawler service will be started by using  the following commands:
 
-```bash
+```text
 $ ./tools/run bash
 ```
 
 Once inside the docker container, you must modify the file **/crawler/crontab** and set in the file the new configuration for the cron. Finally notify the cron program of the new changes
 
-```bash
+```text
 $ nano /crawler/crontab
 $ crontab /crawler/crontab
 ```
 
 You can verify the changes you have made by using the following command:
 
-```bash
+```text
 $ crontab -l
 ```
 
 Once you have finished making the changes, exit the docker container
 
-```bash
+```text
 $ exit
 ```
 
