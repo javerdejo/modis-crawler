@@ -11,6 +11,7 @@ Table of contents
       * [url.json](#url-json)
    * [Build, start and stop docker container](#build-start-stop)
    * [Crawler cron configuration](#cron)
+   * [Adding new products for download](#adding-products)   
    * [Running commands into the docker container](#run)
 <!--te-->
 
@@ -107,6 +108,7 @@ $ exit
 
 **IMPORTANT:** All changes made will be valid while the docker container is running, once the container is stopped ALL changes made will be discarded.
 
+<a name="adding-products"></a>
 # Adding new products for download
 
 It is possible to add more products for download, for this you must configure the file **/crawler/run/cfg/config.json**. In the following **config.json** file the **nflh** product has been added by inserting the next line after **products** section.
