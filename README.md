@@ -111,14 +111,14 @@ $ exit
 <a name="adding-products"></a>
 # Adding new products for download
 
-It is possible to add more products for download, for this you must configure the file **/crawler/run/cfg/config.json**. In the following **config.json** file the **nflh** product has been added by inserting the next line after **products** section.
+It is possible to add more products for download, for this you must configure the file **/crawler/run/cfg/config.json**. In the following **config.json** file the **nflh** product has been added by inserting the next line in the **products** section.
 
 ```json
 {"name": "nflh"}
 ```
 
 ### config.json updated
- 
+
 ```json
 {
   "base": "https://oceandata.sci.gsfc.nasa.gov",
