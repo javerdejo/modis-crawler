@@ -107,6 +107,30 @@ $ exit
 
 **IMPORTANT:** All changes made will be valid while the docker container is running, once the container is stopped ALL changes made will be discarded.
 
+# Adding new products for download
+
+It is possible to add more products for download, for this you must configure the file **/crawler/run/cfg/config.json**. In the following **config.json** file the **nflh** product has been added by inserting the next line after **products** section.
+
+```json
+{"name": "nflh"}
+```
+
+```json
+{
+  "base": "https://oceandata.sci.gsfc.nasa.gov",
+  "platform": "MODIS-Aqua",
+  "level": "Mapped",
+  "period": "Monthly",
+  "pixel": "4km",
+  "products": [
+    {"name": "chlor_a"},
+    {"name": "sst"},
+    {"name": "nflh"}
+  ]
+}
+```
+
+
 <a name="run"></a>
 # Running commands into the docker container
 
